@@ -1,0 +1,94 @@
+.film {
+    max-width: 1144px;
+    margin: 0 auto;
+
+    &__info-container {
+        text-align: center;
+    }
+
+    &__card-container {
+        margin: 10px auto 25px;
+        padding: 20px;
+        width: 90%;
+        text-align: left;
+    }
+
+    &__avatar-container {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 6px;
+    }
+
+    &__text-container {
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+    &__text-title {
+        font-size: 25px;
+    }
+
+    &__button-container {
+        display: flow-root;
+    }
+
+    &__more-info-link {
+        float: right;
+    }
+
+    &__info-icon {
+        vertical-align: sub;
+        margin-right: 3px;
+    }
+
+    &__filter-container {
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    &__filter-text {
+        display: inline-block;
+    }
+
+    &__filter-select {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .film {
+        &__card-container {
+            display: inline-block;
+            width: 38%;
+            margin: 20px 30px;
+            flex-grow: 1;
+        }
+
+        &__avatar-container {
+            display: block;
+        }
+
+        &__avatar {
+            margin: auto;
+        }
+
+        &__info-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .film__card-container {
+        display: inline-block;
+        width: 38%;
+        margin: 20px 30px;
+    }
+
+    .film__filter-container {
+        text-align: left;
+        margin-left: 90px;
+    }
+}
