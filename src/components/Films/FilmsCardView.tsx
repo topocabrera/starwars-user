@@ -93,7 +93,7 @@ const FilmsCardView = ({ films }: { films: Film[] }) => {
       </div>
     </div>
   ) : (
-    <div className="search-message"> No Films found</div>
+    <></>
   );
 };
 

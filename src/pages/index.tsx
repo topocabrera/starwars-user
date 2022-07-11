@@ -2,6 +2,7 @@ import { useQuery } from 'react-query';
 import React from 'react';
 import FilmsCardView from '../components/Films/FilmsCardView';
 import CardHeader from '@mui/material/CardHeader';
+import Loading from '../components/Loading/Loading';
 
 export default function IndexPage() {
   const { isLoading, isError, isSuccess, data } = useQuery('films', () =>
@@ -10,7 +11,7 @@ export default function IndexPage() {
 
   const renderResult = () => {
     if (isLoading) {
-      return <div className='search-message'> Loading... </div>;
+      return <Loading />;
     }
 
     if (isError) {

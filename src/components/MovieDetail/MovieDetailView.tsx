@@ -2,6 +2,7 @@ import { Film } from "../../models";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import CharactersView from "./CharactersView";
+import Loading from "../Loading/Loading";
 
 const MovieDetailView = ({ movie, id }: { movie: Film, id: Number }) => {
 

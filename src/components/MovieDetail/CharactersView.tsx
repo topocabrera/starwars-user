@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const CharacterView = ({ id }: { id: string }) => {
     const { isLoading, isError, isSuccess, data } = useQuery(`character-${id}`, () =>
@@ -10,7 +11,7 @@ const CharacterView = ({ id }: { id: string }) => {
 
     const renderResult = () => {
         if (isLoading) {
-            return <div className="search-message"> Loading... </div>;
+            return <CircularProgress />;
         }
 
         if (isError) {

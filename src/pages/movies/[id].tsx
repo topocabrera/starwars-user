@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import CircularProgress from '@mui/material/CircularProgress';
 import MovieDetailView from "../../components/MovieDetail/MovieDetailView";
+import Loading from "../../components/Loading/Loading";
 
 export default function MoviePage() {
 
@@ -11,8 +12,7 @@ export default function MoviePage() {
         res.json()
       )
     }
-  }
-  );
+  });
 
   const renderResult = () => {
     if (!data) {
@@ -20,7 +20,7 @@ export default function MoviePage() {
     }
 
     if (isLoading) {
-      return <div className="search-message"> Loading... </div>;
+      return <Loading />;
     }
 
     if (isError) {

@@ -5,6 +5,7 @@ import CardHeader from '@mui/material/CardHeader';
 import '../../styles/globals.css';
 import '../components/Films/styles/FilmsCardView.scss';
 import '../components/MovieDetail/styles/MovieDetail.scss';
+import '../components/Loading/styles/Loading.scss';
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
